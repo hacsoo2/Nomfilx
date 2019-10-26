@@ -14,13 +14,13 @@ export default class extends React.Component {
   async componentDidMount() {
     try {
       const {
-        data: { result: nowPlaying }
+        data: { results: nowPlaying }
       } = await moviesApi.nowPlaying();
       const {
-        data: { result: upcoming }
+        data: { results: upcoming }
       } = await moviesApi.upcoming();
       const {
-        data: { result: popular }
+        data: { results: popular }
       } = await moviesApi.popular();
       this.setState({
         nowPlaying,
