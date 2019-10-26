@@ -1,6 +1,6 @@
 import React from "react";
 import DetailPresenter from "./DetailPresenter";
-import { moviesApi, tvApi } from "../..api";
+import { moviesApi, tvApi } from "../../api";
 
 export default class extends React.Component {
   constructor(props) {
@@ -43,9 +43,7 @@ export default class extends React.Component {
   }
 
   render() {
-    const { results, error, loading } = this.state;
-    return (
-      <DetailPresenter results={results} error={error} loading={loading} />
-    );
+    const { result, error, loading } = this.state;
+    return <DetailPresenter result={result} error={error} loading={loading} />;
   }
 }
